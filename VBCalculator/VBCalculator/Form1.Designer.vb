@@ -24,10 +24,12 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.pUserpanel1 = New System.Windows.Forms.Panel()
-        Me.Button13 = New System.Windows.Forms.Button()
-        Me.Button12 = New System.Windows.Forms.Button()
-        Me.Button11 = New System.Windows.Forms.Button()
-        Me.Button10 = New System.Windows.Forms.Button()
+        Me.BNew = New System.Windows.Forms.Button()
+        Me.BEnter = New System.Windows.Forms.Button()
+        Me.BTrough = New System.Windows.Forms.Button()
+        Me.BTimes = New System.Windows.Forms.Button()
+        Me.BMinus = New System.Windows.Forms.Button()
+        Me.BPlus = New System.Windows.Forms.Button()
         Me.bMathComma = New System.Windows.Forms.Button()
         Me.bMathNumber9 = New System.Windows.Forms.Button()
         Me.bMathNumber8 = New System.Windows.Forms.Button()
@@ -45,7 +47,6 @@ Partial Class Form1
         Me.llHomepage1 = New System.Windows.Forms.LinkLabel()
         Me.llRickroll = New System.Windows.Forms.LinkLabel()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.pUserpanel1.SuspendLayout()
         Me.pSystempanel1.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -54,11 +55,12 @@ Partial Class Form1
         'pUserpanel1
         '
         Me.pUserpanel1.BackColor = System.Drawing.Color.Black
-        Me.pUserpanel1.Controls.Add(Me.Button1)
-        Me.pUserpanel1.Controls.Add(Me.Button13)
-        Me.pUserpanel1.Controls.Add(Me.Button12)
-        Me.pUserpanel1.Controls.Add(Me.Button11)
-        Me.pUserpanel1.Controls.Add(Me.Button10)
+        Me.pUserpanel1.Controls.Add(Me.BNew)
+        Me.pUserpanel1.Controls.Add(Me.BEnter)
+        Me.pUserpanel1.Controls.Add(Me.BTrough)
+        Me.pUserpanel1.Controls.Add(Me.BTimes)
+        Me.pUserpanel1.Controls.Add(Me.BMinus)
+        Me.pUserpanel1.Controls.Add(Me.BPlus)
         Me.pUserpanel1.Controls.Add(Me.bMathComma)
         Me.pUserpanel1.Controls.Add(Me.bMathNumber9)
         Me.pUserpanel1.Controls.Add(Me.bMathNumber8)
@@ -75,49 +77,69 @@ Partial Class Form1
         Me.pUserpanel1.Size = New System.Drawing.Size(753, 280)
         Me.pUserpanel1.TabIndex = 0
         '
-        'Button13
+        'BNew
         '
-        Me.Button13.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button13.Location = New System.Drawing.Point(256, 205)
-        Me.Button13.Name = "Button13"
-        Me.Button13.Size = New System.Drawing.Size(75, 57)
-        Me.Button13.TabIndex = 40
-        Me.Button13.Tag = "MathNumber"
-        Me.Button13.Text = "/"
-        Me.Button13.UseVisualStyleBackColor = True
+        Me.BNew.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BNew.Location = New System.Drawing.Point(418, 16)
+        Me.BNew.Name = "BNew"
+        Me.BNew.Size = New System.Drawing.Size(75, 57)
+        Me.BNew.TabIndex = 42
+        Me.BNew.Text = "New"
+        Me.BNew.UseVisualStyleBackColor = True
         '
-        'Button12
+        'BEnter
         '
-        Me.Button12.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button12.Location = New System.Drawing.Point(256, 142)
-        Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(75, 57)
-        Me.Button12.TabIndex = 39
-        Me.Button12.Tag = "MathNumber"
-        Me.Button12.Text = "*"
-        Me.Button12.UseVisualStyleBackColor = True
+        Me.BEnter.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BEnter.Location = New System.Drawing.Point(337, 16)
+        Me.BEnter.Name = "BEnter"
+        Me.BEnter.Size = New System.Drawing.Size(75, 246)
+        Me.BEnter.TabIndex = 41
+        Me.BEnter.Text = "Enter"
+        Me.BEnter.UseVisualStyleBackColor = True
         '
-        'Button11
+        'BTrough
         '
-        Me.Button11.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button11.Location = New System.Drawing.Point(256, 79)
-        Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(75, 57)
-        Me.Button11.TabIndex = 38
-        Me.Button11.Tag = "MathNumber"
-        Me.Button11.Text = "-"
-        Me.Button11.UseVisualStyleBackColor = True
+        Me.BTrough.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTrough.Location = New System.Drawing.Point(256, 205)
+        Me.BTrough.Name = "BTrough"
+        Me.BTrough.Size = New System.Drawing.Size(75, 57)
+        Me.BTrough.TabIndex = 40
+        Me.BTrough.Tag = "MathNumber"
+        Me.BTrough.Text = "/"
+        Me.BTrough.UseVisualStyleBackColor = True
         '
-        'Button10
+        'BTimes
         '
-        Me.Button10.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button10.Location = New System.Drawing.Point(256, 16)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(75, 57)
-        Me.Button10.TabIndex = 37
-        Me.Button10.Tag = "MathNumber"
-        Me.Button10.Text = "+"
-        Me.Button10.UseVisualStyleBackColor = True
+        Me.BTimes.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTimes.Location = New System.Drawing.Point(256, 142)
+        Me.BTimes.Name = "BTimes"
+        Me.BTimes.Size = New System.Drawing.Size(75, 57)
+        Me.BTimes.TabIndex = 39
+        Me.BTimes.Tag = "MathNumber"
+        Me.BTimes.Text = "*"
+        Me.BTimes.UseVisualStyleBackColor = True
+        '
+        'BMinus
+        '
+        Me.BMinus.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BMinus.Location = New System.Drawing.Point(256, 79)
+        Me.BMinus.Name = "BMinus"
+        Me.BMinus.Size = New System.Drawing.Size(75, 57)
+        Me.BMinus.TabIndex = 38
+        Me.BMinus.Tag = "MathNumber"
+        Me.BMinus.Text = "-"
+        Me.BMinus.UseVisualStyleBackColor = True
+        '
+        'BPlus
+        '
+        Me.BPlus.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BPlus.Location = New System.Drawing.Point(256, 16)
+        Me.BPlus.Name = "BPlus"
+        Me.BPlus.Size = New System.Drawing.Size(75, 57)
+        Me.BPlus.TabIndex = 37
+        Me.BPlus.Tag = "MathNumber"
+        Me.BPlus.Text = "+"
+        Me.BPlus.UseVisualStyleBackColor = True
         '
         'bMathComma
         '
@@ -304,16 +326,6 @@ Partial Class Form1
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
-        'Button1
-        '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(337, 16)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 246)
-        Me.Button1.TabIndex = 41
-        Me.Button1.Text = "Enter"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -343,10 +355,10 @@ Partial Class Form1
     Friend WithEvents bMathNumber0 As Button
     Friend WithEvents bMathNumber1 As Button
     Friend WithEvents Ergebnisverlauf As Label
-    Friend WithEvents Button13 As Button
-    Friend WithEvents Button12 As Button
-    Friend WithEvents Button11 As Button
-    Friend WithEvents Button10 As Button
+    Friend WithEvents BTrough As Button
+    Friend WithEvents BTimes As Button
+    Friend WithEvents BMinus As Button
+    Friend WithEvents BPlus As Button
     Friend WithEvents bMathComma As Button
     Friend WithEvents bMathNumber9 As Button
     Friend WithEvents bMathNumber8 As Button
@@ -356,5 +368,6 @@ Partial Class Form1
     Friend WithEvents bMathNumber4 As Button
     Friend WithEvents bMathNumber3 As Button
     Friend WithEvents bMathNumber2 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents BEnter As Button
+    Friend WithEvents BNew As Button
 End Class

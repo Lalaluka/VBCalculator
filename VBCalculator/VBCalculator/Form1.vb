@@ -1,12 +1,8 @@
 ﻿Public Class Form1
-    Private curentcount = 0
-    Private modeset = False
-    Private mode = vbNull
+    Private currentcount As String = "0"
+    Private currentsollution = 0
+    Private mode = 0
 
-
-    Private Sub LlGithub_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles llGithub.LinkClicked
-        openLink("https://github.com/Lalaluka/VBCalculator")
-    End Sub
 
     Private Sub openLink(link As String)
         Try
@@ -14,6 +10,10 @@
         Catch
             MessageBox.Show("Your Browser doesnt support Link calls", "Error", MessageBoxButtons.OK)
         End Try
+    End Sub
+
+    Private Sub LlGithub_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles llGithub.LinkClicked
+        openLink("https://github.com/Lalaluka/VBCalculator")
     End Sub
 
     Private Sub LlHomepage1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles llHomepage1.LinkClicked
@@ -24,27 +24,97 @@
         openLink("https://www.youtube.com/watch?v=DLzxrzFCyOs")
     End Sub
 
-    Private Sub PUserpanel1_Paint(sender As Object, e As PaintEventArgs) Handles pUserpanel1.Paint
-
-    End Sub
-
     Private Sub BMathNumber1_Click(sender As Object, e As EventArgs) Handles bMathNumber1.Click
         numberset(1)
     End Sub
 
     Private Sub numberset(num As Long)
-        If modeset Then
-
+        If (mode <> 0) Then
+            Select Case mode
+                Case 1
+                    currentsollution = currentsollution + num
+                    Me.Ergebnisverlauf.Text = (Me.Ergebnisverlauf.Text + "+" + CStr(num) + "=" + CStr(currentsollution))
+                    mode = 0
+                Case 2
+                    currentsollution = currentsollution - num
+                    Me.Ergebnisverlauf.Text = (Me.Ergebnisverlauf.Text + "-" + CStr(num) + "=" + CStr(currentsollution))
+                    mode = 0
+                Case 3
+                    currentsollution = currentsollution * num
+                    Me.Ergebnisverlauf.Text = (Me.Ergebnisverlauf.Text + "*" + CStr(num) + "=" + CStr(currentsollution))
+                    mode = 0
+                Case 4
+                    currentsollution = currentsollution / num
+                    Me.Ergebnisverlauf.Text = (Me.Ergebnisverlauf.Text + "/" + CStr(num) + "=" + CStr(currentsollution))
+                    mode = 0
+            End Select
         Else
-            curentcount = curentcount + 1
+            If (currentcount <> 0) Then
+                currentcount = currentcount + CStr(num)
+            Else
+                currentcount = num
+            End If
+            currentsollution = currentcount
+            Me.Ergebnisverlauf.Text = (Me.Ergebnisverlauf.Text + CStr(currentsollution))
         End If
-        'Just some dumb shit to debug
-        Me.Ergebnisverlauf.Text = (Me.Ergebnisverlauf.Text + CStr(curentcount))
-        If (curentcount <> 0) Then
-            MessageBox.Show("YAYA", curentcount, MessageBoxButtons.OK)
-        Else
+    End Sub
 
-        End If
-        MessageBox.Show("Your Browser doesnt support Link calls", curentcount, MessageBoxButtons.OK)
+    Private Sub BMathNumber2_Click(sender As Object, e As EventArgs) Handles bMathNumber2.Click
+        numberset(2)
+    End Sub
+
+    Private Sub BMathNumber3_Click(sender As Object, e As EventArgs) Handles bMathNumber3.Click
+        numberset(3)
+    End Sub
+
+    Private Sub BMathNumber4_Click(sender As Object, e As EventArgs) Handles bMathNumber4.Click
+        numberset(4)
+    End Sub
+
+    Private Sub BMathNumber5_Click(sender As Object, e As EventArgs) Handles bMathNumber5.Click
+        numberset(5)
+    End Sub
+
+    Private Sub BMathNumber6_Click(sender As Object, e As EventArgs) Handles bMathNumber6.Click
+        numberset(6)
+    End Sub
+
+    Private Sub BMathNumber7_Click(sender As Object, e As EventArgs) Handles bMathNumber7.Click
+        numberset(7)
+    End Sub
+
+    Private Sub BMathNumber8_Click(sender As Object, e As EventArgs) Handles bMathNumber8.Click
+        numberset(8)
+    End Sub
+
+    Private Sub BMathNumber9_Click(sender As Object, e As EventArgs) Handles bMathNumber9.Click
+        numberset(9)
+    End Sub
+
+    Private Sub BPlus_Click(sender As Object, e As EventArgs) Handles BPlus.Click
+        mode = 1
+    End Sub
+
+    Private Sub BMathNumber0_Click(sender As Object, e As EventArgs) Handles bMathNumber0.Click
+        numberset(0)
+    End Sub
+
+    Private Sub BMinus_Click(sender As Object, e As EventArgs) Handles BMinus.Click
+        mode = 2
+    End Sub
+
+    Private Sub BTimes_Click(sender As Object, e As EventArgs) Handles BTimes.Click
+        mode = 3
+    End Sub
+
+    Private Sub BTrough_Click(sender As Object, e As EventArgs) Handles BTrough.Click
+        mode = 4
+    End Sub
+
+    Private Sub BNew_Click(sender As Object, e As EventArgs) Handles BNew.Click
+        currentcount = "0"
+        currentsollution = 0
+        mode = 0
+        Me.Ergebnisverlauf.Text = (Me.Ergebnisverlauf.Text + vbCrLf)
     End Sub
 End Class
