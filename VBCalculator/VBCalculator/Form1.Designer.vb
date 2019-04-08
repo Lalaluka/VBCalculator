@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Das Formular überschreibt den Löschvorgang, um die Komponentenliste zu bereinigen.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,9 +20,10 @@ Partial Class Form1
     'Hinweis: Die folgende Prozedur ist für den Windows Form-Designer erforderlich.
     'Das Bearbeiten ist mit dem Windows Form-Designer möglich.  
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.pUserpanel1 = New System.Windows.Forms.Panel()
         Me.BNew = New System.Windows.Forms.Button()
         Me.BEnter = New System.Windows.Forms.Button()
@@ -253,6 +254,7 @@ Partial Class Form1
         '
         'bMathNumber1
         '
+        Me.bMathNumber1.BackColor = System.Drawing.Color.Khaki
         Me.bMathNumber1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.bMathNumber1.Location = New System.Drawing.Point(13, 16)
         Me.bMathNumber1.Name = "bMathNumber1"
@@ -260,7 +262,7 @@ Partial Class Form1
         Me.bMathNumber1.TabIndex = 13
         Me.bMathNumber1.Tag = "MathNumber"
         Me.bMathNumber1.Text = "1"
-        Me.bMathNumber1.UseVisualStyleBackColor = True
+        Me.bMathNumber1.UseVisualStyleBackColor = False
         '
         'pSystempanel1
         '
@@ -280,7 +282,7 @@ Partial Class Form1
         Me.Ergebnisverlauf.Padding = New System.Windows.Forms.Padding(3)
         Me.Ergebnisverlauf.Size = New System.Drawing.Size(753, 75)
         Me.Ergebnisverlauf.TabIndex = 0
-        Me.Ergebnisverlauf.Text = "Start"
+        Me.Ergebnisverlauf.Text = " "
         Me.Ergebnisverlauf.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
         'llGithub
@@ -288,13 +290,16 @@ Partial Class Form1
         Me.llGithub.AccessibleDescription = "GitHubLink"
         Me.llGithub.AccessibleName = "GitHubLink"
         Me.llGithub.AutoSize = True
+        Me.llGithub.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.llGithub.LinkColor = System.Drawing.Color.Black
         Me.llGithub.Location = New System.Drawing.Point(668, 376)
         Me.llGithub.Name = "llGithub"
+        Me.llGithub.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.llGithub.Size = New System.Drawing.Size(40, 13)
         Me.llGithub.TabIndex = 10
         Me.llGithub.TabStop = True
         Me.llGithub.Text = "GitHub"
+        Me.llGithub.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'llHomepage1
         '
@@ -302,7 +307,7 @@ Partial Class Form1
         Me.llHomepage1.AccessibleName = "HomepageLink"
         Me.llHomepage1.AutoSize = True
         Me.llHomepage1.LinkColor = System.Drawing.Color.Black
-        Me.llHomepage1.Location = New System.Drawing.Point(622, 376)
+        Me.llHomepage1.Location = New System.Drawing.Point(621, 376)
         Me.llHomepage1.Name = "llHomepage1"
         Me.llHomepage1.Size = New System.Drawing.Size(41, 13)
         Me.llHomepage1.TabIndex = 11
@@ -336,6 +341,7 @@ Partial Class Form1
         Me.Controls.Add(Me.llGithub)
         Me.Controls.Add(Me.pSystempanel1)
         Me.Controls.Add(Me.pUserpanel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.pUserpanel1.ResumeLayout(False)
