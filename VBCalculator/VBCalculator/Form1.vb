@@ -30,24 +30,8 @@
 
     Private Sub numberset(num As Long)
         If (mode <> 0) Then
-            Select Case mode
-                Case 1
-                    currentsollution = currentsollution + num
-                    Me.Ergebnisverlauf.Text = (Me.Ergebnisverlauf.Text + "+" + CStr(num) + "=" + CStr(currentsollution))
-                    mode = 0
-                Case 2
-                    currentsollution = currentsollution - num
-                    Me.Ergebnisverlauf.Text = (Me.Ergebnisverlauf.Text + "-" + CStr(num) + "=" + CStr(currentsollution))
-                    mode = 0
-                Case 3
-                    currentsollution = currentsollution * num
-                    Me.Ergebnisverlauf.Text = (Me.Ergebnisverlauf.Text + "*" + CStr(num) + "=" + CStr(currentsollution))
-                    mode = 0
-                Case 4
-                    currentsollution = currentsollution / num
-                    Me.Ergebnisverlauf.Text = (Me.Ergebnisverlauf.Text + "/" + CStr(num) + "=" + CStr(currentsollution))
-                    mode = 0
-            End Select
+            currentcount = currentcount + CStr(num)
+            Me.Ergebnisverlauf.Text = (Me.Ergebnisverlauf.Text + CStr(num))
         Else
             If (currentcount <> 0) Then
                 currentcount = currentcount + CStr(num)
@@ -55,7 +39,7 @@
                 currentcount = num
             End If
             currentsollution = currentcount
-            Me.Ergebnisverlauf.Text = (Me.Ergebnisverlauf.Text + CStr(currentsollution))
+            Me.Ergebnisverlauf.Text = (Me.Ergebnisverlauf.Text + CStr(num))
         End If
     End Sub
 
@@ -92,7 +76,12 @@
     End Sub
 
     Private Sub BPlus_Click(sender As Object, e As EventArgs) Handles BPlus.Click
+        If mode <> 0 Then
+            calculate()
+        End If
         mode = 1
+        Me.Ergebnisverlauf.Text = (Me.Ergebnisverlauf.Text + "+")
+        currentcount = "0"
     End Sub
 
     Private Sub BMathNumber0_Click(sender As Object, e As EventArgs) Handles bMathNumber0.Click
@@ -100,15 +89,30 @@
     End Sub
 
     Private Sub BMinus_Click(sender As Object, e As EventArgs) Handles BMinus.Click
+        If mode <> 0 Then
+            calculate()
+        End If
         mode = 2
+        Me.Ergebnisverlauf.Text = (Me.Ergebnisverlauf.Text + "-")
+        currentcount = "0"
     End Sub
 
     Private Sub BTimes_Click(sender As Object, e As EventArgs) Handles BTimes.Click
+        If mode <> 0 Then
+            calculate()
+        End If
         mode = 3
+        Me.Ergebnisverlauf.Text = (Me.Ergebnisverlauf.Text + "*")
+        currentcount = "0"
     End Sub
 
     Private Sub BTrough_Click(sender As Object, e As EventArgs) Handles BTrough.Click
+        If mode <> 0 Then
+            calculate()
+        End If
         mode = 4
+        Me.Ergebnisverlauf.Text = (Me.Ergebnisverlauf.Text + "/")
+        currentcount = "0"
     End Sub
 
     Private Sub BNew_Click(sender As Object, e As EventArgs) Handles BNew.Click
@@ -116,5 +120,24 @@
         currentsollution = 0
         mode = 0
         Me.Ergebnisverlauf.Text = (Me.Ergebnisverlauf.Text + vbCrLf)
+    End Sub
+
+    Private Sub BEnter_Click(sender As Object, e As EventArgs) Handles BEnter.Click
+        calculate()
+        mode = 0
+        Me.Ergebnisverlauf.Text = (Me.Ergebnisverlauf.Text + "=" + CStr(currentsollution))
+    End Sub
+
+    Private Sub calculate()
+        Select Case mode
+            Case 1
+                currentsollution = CULng(currentsollution) + CULng(currentcount)
+            Case 2
+                currentsollution = currentsollution - currentcount
+            Case 3
+                currentsollution = currentsollution * currentcount
+            Case 4
+                currentsollution = currentsollution / currentcount
+        End Select
     End Sub
 End Class

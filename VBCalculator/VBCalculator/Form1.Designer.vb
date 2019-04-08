@@ -22,7 +22,6 @@ Partial Class Form1
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.pUserpanel1 = New System.Windows.Forms.Panel()
         Me.BNew = New System.Windows.Forms.Button()
@@ -47,10 +46,8 @@ Partial Class Form1
         Me.llGithub = New System.Windows.Forms.LinkLabel()
         Me.llHomepage1 = New System.Windows.Forms.LinkLabel()
         Me.llRickroll = New System.Windows.Forms.LinkLabel()
-        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.pUserpanel1.SuspendLayout()
         Me.pSystempanel1.SuspendLayout()
-        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pUserpanel1
@@ -327,10 +324,6 @@ Partial Class Form1
         Me.llRickroll.TabStop = True
         Me.llRickroll.Text = "Important"
         '
-        'ErrorProvider1
-        '
-        Me.ErrorProvider1.ContainerControl = Me
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -346,7 +339,6 @@ Partial Class Form1
         Me.Text = "Form1"
         Me.pUserpanel1.ResumeLayout(False)
         Me.pSystempanel1.ResumeLayout(False)
-        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -357,7 +349,6 @@ Partial Class Form1
     Friend WithEvents llGithub As LinkLabel
     Friend WithEvents llHomepage1 As LinkLabel
     Friend WithEvents llRickroll As LinkLabel
-    Friend WithEvents ErrorProvider1 As ErrorProvider
     Friend WithEvents bMathNumber0 As Button
     Friend WithEvents bMathNumber1 As Button
     Friend WithEvents Ergebnisverlauf As Label
