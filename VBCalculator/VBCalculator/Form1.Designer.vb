@@ -52,7 +52,7 @@ Partial Class Form1
         '
         'pUserpanel1
         '
-        Me.pUserpanel1.BackColor = System.Drawing.Color.Black
+        Me.pUserpanel1.BackColor = System.Drawing.Color.DimGray
         Me.pUserpanel1.Controls.Add(Me.BNew)
         Me.pUserpanel1.Controls.Add(Me.BEnter)
         Me.pUserpanel1.Controls.Add(Me.BTrough)
@@ -229,6 +229,7 @@ Partial Class Form1
         '
         'bMathNumber2
         '
+        Me.bMathNumber2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.bMathNumber2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.bMathNumber2.Location = New System.Drawing.Point(94, 16)
         Me.bMathNumber2.Name = "bMathNumber2"
@@ -236,7 +237,7 @@ Partial Class Form1
         Me.bMathNumber2.TabIndex = 28
         Me.bMathNumber2.Tag = "MathNumber"
         Me.bMathNumber2.Text = "2"
-        Me.bMathNumber2.UseVisualStyleBackColor = True
+        Me.bMathNumber2.UseVisualStyleBackColor = False
         '
         'bMathNumber0
         '
@@ -251,7 +252,7 @@ Partial Class Form1
         '
         'bMathNumber1
         '
-        Me.bMathNumber1.BackColor = System.Drawing.Color.Khaki
+        Me.bMathNumber1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.bMathNumber1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.bMathNumber1.Location = New System.Drawing.Point(13, 16)
         Me.bMathNumber1.Name = "bMathNumber1"
@@ -272,6 +273,7 @@ Partial Class Form1
         '
         'Ergebnisverlauf
         '
+        Me.Ergebnisverlauf.BackColor = System.Drawing.SystemColors.HighlightText
         Me.Ergebnisverlauf.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Ergebnisverlauf.Location = New System.Drawing.Point(0, 0)
         Me.Ergebnisverlauf.Margin = New System.Windows.Forms.Padding(0)
@@ -288,7 +290,7 @@ Partial Class Form1
         Me.llGithub.AccessibleName = "GitHubLink"
         Me.llGithub.AutoSize = True
         Me.llGithub.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.llGithub.LinkColor = System.Drawing.Color.Black
+        Me.llGithub.LinkColor = System.Drawing.Color.White
         Me.llGithub.Location = New System.Drawing.Point(668, 376)
         Me.llGithub.Name = "llGithub"
         Me.llGithub.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -303,7 +305,7 @@ Partial Class Form1
         Me.llHomepage1.AccessibleDescription = "HomepageLink"
         Me.llHomepage1.AccessibleName = "HomepageLink"
         Me.llHomepage1.AutoSize = True
-        Me.llHomepage1.LinkColor = System.Drawing.Color.Black
+        Me.llHomepage1.LinkColor = System.Drawing.Color.White
         Me.llHomepage1.Location = New System.Drawing.Point(621, 376)
         Me.llHomepage1.Name = "llHomepage1"
         Me.llHomepage1.Size = New System.Drawing.Size(41, 13)
@@ -316,7 +318,7 @@ Partial Class Form1
         Me.llRickroll.AccessibleDescription = "RickRollLink"
         Me.llRickroll.AccessibleName = "RickRollLink"
         Me.llRickroll.AutoSize = True
-        Me.llRickroll.LinkColor = System.Drawing.Color.Black
+        Me.llRickroll.LinkColor = System.Drawing.Color.White
         Me.llRickroll.Location = New System.Drawing.Point(714, 376)
         Me.llRickroll.Name = "llRickroll"
         Me.llRickroll.Size = New System.Drawing.Size(51, 13)
@@ -328,6 +330,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.Desktop
         Me.ClientSize = New System.Drawing.Size(783, 400)
         Me.Controls.Add(Me.llRickroll)
         Me.Controls.Add(Me.llHomepage1)
