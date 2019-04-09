@@ -46,6 +46,9 @@ Partial Class Form1
         Me.llGithub = New System.Windows.Forms.LinkLabel()
         Me.llHomepage1 = New System.Windows.Forms.LinkLabel()
         Me.llRickroll = New System.Windows.Forms.LinkLabel()
+        Me.bSquareroot = New System.Windows.Forms.Button()
+        Me.bSquare = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.pUserpanel1.SuspendLayout()
         Me.pSystempanel1.SuspendLayout()
         Me.SuspendLayout()
@@ -53,6 +56,9 @@ Partial Class Form1
         'pUserpanel1
         '
         Me.pUserpanel1.BackColor = System.Drawing.Color.DimGray
+        Me.pUserpanel1.Controls.Add(Me.Button1)
+        Me.pUserpanel1.Controls.Add(Me.bSquare)
+        Me.pUserpanel1.Controls.Add(Me.bSquareroot)
         Me.pUserpanel1.Controls.Add(Me.BNew)
         Me.pUserpanel1.Controls.Add(Me.BEnter)
         Me.pUserpanel1.Controls.Add(Me.BTrough)
@@ -72,7 +78,7 @@ Partial Class Form1
         Me.pUserpanel1.Controls.Add(Me.bMathNumber1)
         Me.pUserpanel1.Location = New System.Drawing.Point(12, 93)
         Me.pUserpanel1.Name = "pUserpanel1"
-        Me.pUserpanel1.Size = New System.Drawing.Size(753, 280)
+        Me.pUserpanel1.Size = New System.Drawing.Size(509, 280)
         Me.pUserpanel1.TabIndex = 0
         '
         'BNew
@@ -268,7 +274,7 @@ Partial Class Form1
         Me.pSystempanel1.Controls.Add(Me.Ergebnisverlauf)
         Me.pSystempanel1.Location = New System.Drawing.Point(12, 12)
         Me.pSystempanel1.Name = "pSystempanel1"
-        Me.pSystempanel1.Size = New System.Drawing.Size(753, 75)
+        Me.pSystempanel1.Size = New System.Drawing.Size(509, 75)
         Me.pSystempanel1.TabIndex = 1
         '
         'Ergebnisverlauf
@@ -279,7 +285,7 @@ Partial Class Form1
         Me.Ergebnisverlauf.Margin = New System.Windows.Forms.Padding(0)
         Me.Ergebnisverlauf.Name = "Ergebnisverlauf"
         Me.Ergebnisverlauf.Padding = New System.Windows.Forms.Padding(3)
-        Me.Ergebnisverlauf.Size = New System.Drawing.Size(753, 75)
+        Me.Ergebnisverlauf.Size = New System.Drawing.Size(509, 75)
         Me.Ergebnisverlauf.TabIndex = 0
         Me.Ergebnisverlauf.Text = " "
         Me.Ergebnisverlauf.TextAlign = System.Drawing.ContentAlignment.BottomLeft
@@ -291,7 +297,7 @@ Partial Class Form1
         Me.llGithub.AutoSize = True
         Me.llGithub.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.llGithub.LinkColor = System.Drawing.Color.White
-        Me.llGithub.Location = New System.Drawing.Point(668, 376)
+        Me.llGithub.Location = New System.Drawing.Point(424, 378)
         Me.llGithub.Name = "llGithub"
         Me.llGithub.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.llGithub.Size = New System.Drawing.Size(40, 13)
@@ -306,7 +312,7 @@ Partial Class Form1
         Me.llHomepage1.AccessibleName = "HomepageLink"
         Me.llHomepage1.AutoSize = True
         Me.llHomepage1.LinkColor = System.Drawing.Color.White
-        Me.llHomepage1.Location = New System.Drawing.Point(621, 376)
+        Me.llHomepage1.Location = New System.Drawing.Point(377, 378)
         Me.llHomepage1.Name = "llHomepage1"
         Me.llHomepage1.Size = New System.Drawing.Size(41, 13)
         Me.llHomepage1.TabIndex = 11
@@ -319,19 +325,49 @@ Partial Class Form1
         Me.llRickroll.AccessibleName = "RickRollLink"
         Me.llRickroll.AutoSize = True
         Me.llRickroll.LinkColor = System.Drawing.Color.White
-        Me.llRickroll.Location = New System.Drawing.Point(714, 376)
+        Me.llRickroll.Location = New System.Drawing.Point(470, 378)
         Me.llRickroll.Name = "llRickroll"
         Me.llRickroll.Size = New System.Drawing.Size(51, 13)
         Me.llRickroll.TabIndex = 12
         Me.llRickroll.TabStop = True
         Me.llRickroll.Text = "Important"
         '
+        'bSquareroot
+        '
+        Me.bSquareroot.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.bSquareroot.Location = New System.Drawing.Point(418, 79)
+        Me.bSquareroot.Name = "bSquareroot"
+        Me.bSquareroot.Size = New System.Drawing.Size(75, 57)
+        Me.bSquareroot.TabIndex = 43
+        Me.bSquareroot.Text = "√"
+        Me.bSquareroot.UseVisualStyleBackColor = True
+        '
+        'bSquare
+        '
+        Me.bSquare.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.bSquare.Location = New System.Drawing.Point(418, 142)
+        Me.bSquare.Name = "bSquare"
+        Me.bSquare.Size = New System.Drawing.Size(75, 57)
+        Me.bSquare.TabIndex = 44
+        Me.bSquare.Text = "x²"
+        Me.bSquare.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(418, 205)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 57)
+        Me.Button1.TabIndex = 45
+        Me.Button1.Text = "x²"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Desktop
-        Me.ClientSize = New System.Drawing.Size(783, 400)
+        Me.ClientSize = New System.Drawing.Size(539, 400)
         Me.Controls.Add(Me.llRickroll)
         Me.Controls.Add(Me.llHomepage1)
         Me.Controls.Add(Me.llGithub)
@@ -370,4 +406,7 @@ Partial Class Form1
     Friend WithEvents bMathNumber2 As Button
     Friend WithEvents BEnter As Button
     Friend WithEvents BNew As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents bSquare As Button
+    Friend WithEvents bSquareroot As Button
 End Class

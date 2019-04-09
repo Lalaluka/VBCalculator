@@ -1,4 +1,5 @@
-﻿Public Class Form1
+﻿Imports System.Math
+Public Class Form1
     Private currentcount As String = "0"
     Private currentsollution = 0
     Private mode = 0
@@ -139,5 +140,17 @@
             Case 4
                 currentsollution = currentsollution / currentcount
         End Select
+    End Sub
+
+    Private Sub BSquareroot_Click(sender As Object, e As EventArgs) Handles bSquareroot.Click
+        currentsollution = Math.Sqrt(currentsollution)
+        Dim newstring = ""
+        Dim st() As String = Me.Ergebnisverlauf.Text.Split("vbCrLf")
+        For Index = 0 To (st.Length - 2)
+            newstring = st(Index) + vbCrLf
+        Next
+        newstring = newstring + "√(" + st(st.Length - 1) + ")"
+        Me.Ergebnisverlauf.Text = newstring
+        Me.Ergebnisverlauf.Text = st(0)
     End Sub
 End Class
