@@ -122,8 +122,5 @@
   <ItemGroup>
     <None Include="Resources\calculator.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\github_hex_icon.png" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

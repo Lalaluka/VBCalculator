@@ -24,6 +24,9 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.pUserpanel1 = New System.Windows.Forms.Panel()
+        Me.bMathlog = New System.Windows.Forms.Button()
+        Me.bSquare = New System.Windows.Forms.Button()
+        Me.bSquareroot = New System.Windows.Forms.Button()
         Me.BNew = New System.Windows.Forms.Button()
         Me.BEnter = New System.Windows.Forms.Button()
         Me.BTrough = New System.Windows.Forms.Button()
@@ -46,9 +49,6 @@ Partial Class Form1
         Me.llGithub = New System.Windows.Forms.LinkLabel()
         Me.llHomepage1 = New System.Windows.Forms.LinkLabel()
         Me.llRickroll = New System.Windows.Forms.LinkLabel()
-        Me.bSquareroot = New System.Windows.Forms.Button()
-        Me.bSquare = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.pUserpanel1.SuspendLayout()
         Me.pSystempanel1.SuspendLayout()
         Me.SuspendLayout()
@@ -56,7 +56,7 @@ Partial Class Form1
         'pUserpanel1
         '
         Me.pUserpanel1.BackColor = System.Drawing.Color.DimGray
-        Me.pUserpanel1.Controls.Add(Me.Button1)
+        Me.pUserpanel1.Controls.Add(Me.bMathlog)
         Me.pUserpanel1.Controls.Add(Me.bSquare)
         Me.pUserpanel1.Controls.Add(Me.bSquareroot)
         Me.pUserpanel1.Controls.Add(Me.BNew)
@@ -80,6 +80,36 @@ Partial Class Form1
         Me.pUserpanel1.Name = "pUserpanel1"
         Me.pUserpanel1.Size = New System.Drawing.Size(509, 280)
         Me.pUserpanel1.TabIndex = 0
+        '
+        'bMathlog
+        '
+        Me.bMathlog.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.bMathlog.Location = New System.Drawing.Point(418, 205)
+        Me.bMathlog.Name = "bMathlog"
+        Me.bMathlog.Size = New System.Drawing.Size(75, 57)
+        Me.bMathlog.TabIndex = 45
+        Me.bMathlog.Text = "Log()"
+        Me.bMathlog.UseVisualStyleBackColor = True
+        '
+        'bSquare
+        '
+        Me.bSquare.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.bSquare.Location = New System.Drawing.Point(418, 142)
+        Me.bSquare.Name = "bSquare"
+        Me.bSquare.Size = New System.Drawing.Size(75, 57)
+        Me.bSquare.TabIndex = 44
+        Me.bSquare.Text = "x²"
+        Me.bSquare.UseVisualStyleBackColor = True
+        '
+        'bSquareroot
+        '
+        Me.bSquareroot.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.bSquareroot.Location = New System.Drawing.Point(418, 79)
+        Me.bSquareroot.Name = "bSquareroot"
+        Me.bSquareroot.Size = New System.Drawing.Size(75, 57)
+        Me.bSquareroot.TabIndex = 43
+        Me.bSquareroot.Text = "√"
+        Me.bSquareroot.UseVisualStyleBackColor = True
         '
         'BNew
         '
@@ -332,36 +362,6 @@ Partial Class Form1
         Me.llRickroll.TabStop = True
         Me.llRickroll.Text = "Important"
         '
-        'bSquareroot
-        '
-        Me.bSquareroot.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bSquareroot.Location = New System.Drawing.Point(418, 79)
-        Me.bSquareroot.Name = "bSquareroot"
-        Me.bSquareroot.Size = New System.Drawing.Size(75, 57)
-        Me.bSquareroot.TabIndex = 43
-        Me.bSquareroot.Text = "√"
-        Me.bSquareroot.UseVisualStyleBackColor = True
-        '
-        'bSquare
-        '
-        Me.bSquare.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bSquare.Location = New System.Drawing.Point(418, 142)
-        Me.bSquare.Name = "bSquare"
-        Me.bSquare.Size = New System.Drawing.Size(75, 57)
-        Me.bSquare.TabIndex = 44
-        Me.bSquare.Text = "x²"
-        Me.bSquare.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(418, 205)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 57)
-        Me.Button1.TabIndex = 45
-        Me.Button1.Text = "x²"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -406,7 +406,7 @@ Partial Class Form1
     Friend WithEvents bMathNumber2 As Button
     Friend WithEvents BEnter As Button
     Friend WithEvents BNew As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents bMathlog As Button
     Friend WithEvents bSquare As Button
     Friend WithEvents bSquareroot As Button
 End Class

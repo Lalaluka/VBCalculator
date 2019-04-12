@@ -126,11 +126,14 @@ Public Class Form1
     Private Sub BEnter_Click(sender As Object, e As EventArgs) Handles BEnter.Click
         calculate()
         mode = 0
+        currentcount = currentsollution
         Me.Ergebnisverlauf.Text = (Me.Ergebnisverlauf.Text + "=" + CStr(currentsollution))
     End Sub
 
     Private Sub calculate()
         Select Case mode
+            Case 0
+                currentsollution = currentcount
             Case 1
                 currentsollution = CULng(currentsollution) + CULng(currentcount)
             Case 2
@@ -143,14 +146,23 @@ Public Class Form1
     End Sub
 
     Private Sub BSquareroot_Click(sender As Object, e As EventArgs) Handles bSquareroot.Click
-        currentsollution = Math.Sqrt(currentsollution)
-        Dim newstring = ""
-        Dim st() As String = Me.Ergebnisverlauf.Text.Split("vbCrLf")
-        For Index = 0 To (st.Length - 2)
-            newstring = st(Index) + vbCrLf
-        Next
-        newstring = newstring + "√(" + st(st.Length - 1) + ")"
-        Me.Ergebnisverlauf.Text = newstring
-        Me.Ergebnisverlauf.Text = st(0)
+        If (currentcount <> "0") Then
+            currentcount = Math.Sqrt(currentcount)
+        End If
+        Me.Ergebnisverlauf.Text = Me.Ergebnisverlauf.Text + "√"
+    End Sub
+
+    Private Sub BSquare_Click(sender As Object, e As EventArgs) Handles bSquare.Click
+        If (currentcount <> "0") Then
+            currentcount = currentcount * currentcount
+        End If
+        Me.Ergebnisverlauf.Text = Me.Ergebnisverlauf.Text + "²"
+    End Sub
+
+    Private Sub BMathlog_Click(sender As Object, e As EventArgs) Handles bMathlog.Click
+        If (currentcount <> "0") Then
+            currentcount = Math.Log(currentcount)
+        End If
+        Me.Ergebnisverlauf.Text = Me.Ergebnisverlauf.Text + "LOG"
     End Sub
 End Class
