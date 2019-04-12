@@ -1,4 +1,5 @@
-﻿Public Class Form1
+﻿Imports System.Math
+Public Class Form1
     Private currentcount As String = "0"
     Private currentsollution = 0
     Private mode = 0
@@ -125,11 +126,14 @@
     Private Sub BEnter_Click(sender As Object, e As EventArgs) Handles BEnter.Click
         calculate()
         mode = 0
+        currentcount = currentsollution
         Me.Ergebnisverlauf.Text = (Me.Ergebnisverlauf.Text + "=" + CStr(currentsollution))
     End Sub
 
     Private Sub calculate()
         Select Case mode
+            Case 0
+                currentsollution = currentcount
             Case 1
                 currentsollution = CULng(currentsollution) + CULng(currentcount)
             Case 2
@@ -139,5 +143,26 @@
             Case 4
                 currentsollution = currentsollution / currentcount
         End Select
+    End Sub
+
+    Private Sub BSquareroot_Click(sender As Object, e As EventArgs) Handles bSquareroot.Click
+        If (currentcount <> "0") Then
+            currentcount = Math.Sqrt(currentcount)
+        End If
+        Me.Ergebnisverlauf.Text = Me.Ergebnisverlauf.Text + "√"
+    End Sub
+
+    Private Sub BSquare_Click(sender As Object, e As EventArgs) Handles bSquare.Click
+        If (currentcount <> "0") Then
+            currentcount = currentcount * currentcount
+        End If
+        Me.Ergebnisverlauf.Text = Me.Ergebnisverlauf.Text + "²"
+    End Sub
+
+    Private Sub BMathlog_Click(sender As Object, e As EventArgs) Handles bMathlog.Click
+        If (currentcount <> "0") Then
+            currentcount = Math.Log(currentcount)
+        End If
+        Me.Ergebnisverlauf.Text = Me.Ergebnisverlauf.Text + "LOG"
     End Sub
 End Class
